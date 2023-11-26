@@ -10,8 +10,6 @@ pip install tensorflow
 Использование
 Этот код демонстрирует использование библиотеки transformers для проведения анализа тональности текста с помощью предобученной модели BERT (rubert-base-cased-sentiment).
 
-python
-Copy code
 from transformers import pipeline
 
 # Инициализация классификатора для определения тональности текста
