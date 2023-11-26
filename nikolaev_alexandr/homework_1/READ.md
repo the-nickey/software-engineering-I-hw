@@ -8,7 +8,7 @@ pip install transformers
 pip install tensorflow
 ```
 
-##Использование
+## Использование
 Этот код демонстрирует использование библиотеки transformers для проведения анализа тональности текста с помощью предобученной модели BERT (rubert-base-cased-sentiment).
 ```python
 from transformers import pipeline
@@ -28,8 +28,8 @@ results = classifier(statements)
 print(results)
 ```
 
-##Функции
-###check(results)
+## Функции
+### check(results)
 ```python
 def check(results):
     model_tonality = [i.get('label') for i in results]
@@ -40,7 +40,7 @@ def check(results):
         print('Модель не справилась с определением тональности текста, попробуйте ввести более явные по тональности предложения.')
 ```
 
-###definition(statements)
+### definition(statements)
 ```python
 def definition(statements):
     results = classifier(statements)
@@ -48,7 +48,7 @@ def definition(statements):
     return results
 ```
 
-###main()
+### main()
 ```python
 def main():
     print('Введите три предложения: с позитивной, негативной и нейтральной тональностью текста:')
