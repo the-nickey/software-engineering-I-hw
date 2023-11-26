@@ -1,12 +1,11 @@
-## Sentiment Analysis using Transformers
+# Sentiment Analysis using Transformers
 
-### Установка необходимых библиотек
+## Установка необходимых библиотек
 
-Для корректной работы кода необходимо установить следующие библиотеки:
-
-```bash
+### Для корректной работы кода необходимо установить следующие библиотеки:
 pip install transformers
 pip install tensorflow
+
 Использование
 Этот код демонстрирует использование библиотеки transformers для проведения анализа тональности текста с помощью предобученной модели BERT (rubert-base-cased-sentiment).
 
