@@ -1,37 +1,54 @@
-Creating API of our previous model 
+# Creating API for our Previous Model
 
-##What does this project? 
+## What does this project?
 
-So we've created API to perfome our model's abilities
+We have developed an API to leverage the abilities of our previous model.
 
-##How can I create our own API using this model? 
+## How can I create my own API using this model?
 
-You only need to import necessary packages from requirements.txt and run a file
+You can create your own API by following these simple steps:
 
+1. Install the required packages listed in the requirements.txt file:
 
 ```
 pip install -r requirements.txt
+```
 
+2. Run the application file:
+
+```
 uvicorn ask_friend:app
 ```
-##How can I interact with model using API?
 
-There are two ways to interact with API:
+## How can I interact with the model using the API?
 
-- Using Postman. You can ask a question sending POST data via raw JSON with Postman. For example:
+There are two ways to interact with the API:
+
+1. Using Postman
+
+Send a POST request with raw JSON data containing your question. For example:
 
 ```
 {
-    "text":"Где ты учишься?"
+    "text": "Где ты учишься?"
 }
-``` 
-Model will answer you:
 
 ```
-{"score":0.6466110348701477,"start":42,"end":86,"answer":" в Уфимском университете науки и технологий."}
-```
-- Usind cURL. For example, you can ask it:
 
+The model will respond with:
+
+```
+{
+    "score": 0.6466110348701477,
+    "start": 42,
+    "end": 86,
+    "answer": " в Уфимском университете."
+}
+```
+
+2. Using cURL
+
+Send a POST request using cURL. For example:
 ```
 curl -X 'POST' \
   'http://localhost:8000/answer/' \
@@ -39,11 +56,10 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "text": "Как дела?"
-}
-
+}'
 ```
 
-It will answer:
+The model will respond with:
 
 ```
 {
@@ -52,4 +68,7 @@ It will answer:
   "end": 33,
   "answer": " 22 года."
 }
+
 ```
+
+Feel free to choose the method that suits your preference for interacting with the model through the API.
