@@ -2,3 +2,5 @@
 transformers
 pydantic
 httpx
+uvicorn
+torch
