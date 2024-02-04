@@ -1,6 +1,0 @@
-﻿fastapi 
-transformers
-pydantic
-httpx
-uvicorn
-torch
